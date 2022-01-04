@@ -6,12 +6,12 @@
 </head>
 
 <body>
-	<h1 th:text="'Best of 2021 by '"></h1>
+	<h1 th:text="'Best of 2021'"></h1>
 	<h2>Movies</h2>
 	<ol th:if="${movies.size() > 0}">
-		<li th:each="item : ${movies} th:text=" ${item}""></li>
+		<li th:each="item : ${movies}" th:text=" ${item}"></li>
 	</ol>
-	<p th:unless="${movies.size() < 0}">No elements in list</p>
+	<p th:unless="${movies.size() > 0}">No elements in list</p>
 	<a th:href="@{/}">Back to home</a>
 </body>
 

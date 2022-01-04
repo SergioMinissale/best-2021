@@ -19,7 +19,7 @@ public class IndexController {
 	}
 	@GetMapping("/songs")
 	public String songs(Model model) {
-		List<String> songsList = new ArrayList<String>();
+	
 		model.addAttribute("songs", Arrays.asList("Come me, Achille Lauro", "InfinityLove, Marracash feat. Guè",
 				"Lucciole, Blanco", "Noi, Marracash", "Come nelle canzoni, Coez"));
 		return "songs";
@@ -27,7 +27,7 @@ public class IndexController {
 
 	@GetMapping("/movies")
 	public String movies(Model model) {
-		List<String> moviesList = new ArrayList<String>();
+		
 		model.addAttribute("movies", Arrays.asList("SpiderMan: No Way Home", "Dune", "Eternals", "Don't look up", "Encanto"));
 		return "movies";
 	}
